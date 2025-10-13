@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية آية لتحفيظ القرآن الكريم | Aya Academy - Quran Memorization</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="أكاديمية آية لتحفيظ القرآن الكريم - برامج متميزة لجميع الأعمار مع نخبة من المعلمين المتخصصين. Aya Academy for Quran Memorization - Distinguished programs for all ages">
+    <meta name="keywords" content="تحفيظ القرآن, Quran memorization, تجويد, Tajweed, أكاديمية قرآنية, Islamic academy, حفظ القرآن, Quran learning, تعليم القرآن, Quran teaching">
+    <meta name="author" content="Aya Academy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="أكاديمية آية لتحفيظ القرآن الكريم - Aya Academy">
+    <meta property="og:description" content="رحلتك لحفظ كتاب الله تبدأ هنا - Your journey to memorize the Holy Quran starts here">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayaacademy.com">
+    <meta property="og:image" content="https://ayaacademy.com/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="أكاديمية آية لتحفيظ القرآن الكريم">
+    <meta name="twitter:description" content="برامج متميزة لتحفيظ القرآن الكريم">
+    
+    <link rel="canonical" href="https://ayaacademy.com">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --emerald-50: #ecfdf5;
+            --emerald-100: #d1fae5;
+            --emerald-500: #10b981;
+            --emerald-600: #059669;
+            --emerald-700: #047857;
+            --emerald-800: #065f46;
+            --teal-50: #f0fdfa;
+            --teal-500: #14b8a6;
+            --teal-600: #0d9488;
+            --gray-50: #f9fafb;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: linear-gradient(135deg, var(--emerald-50) 0%, #ffffff 50%, var(--teal-50) 100%);
+            overflow-x: hidden;
+        }
+        
+        body[dir="rtl"] {
+            direction: rtl;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body[dir="ltr"] {
+            direction: ltr;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        nav.scrolled {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-icon {
+            width: 160px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.75rem;
+            color: var(--emerald-800);
+            font-weight: bold;
+        }
+        
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--emerald-600);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--emerald-600);
+        }
+        
+        .lang-btn {
+            background: var(--emerald-600);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .lang-btn:hover {
+            background: var(--emerald-700);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu {
+            display: none;
+            background: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--emerald-600);
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        
+        body[dir="rtl"] .whatsapp-float {
+            left: auto;
+            right: 30px;
+        }
+        
+        .whatsapp-float:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
+            }
+            100% {
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+            }
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem 5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1s ease;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--emerald-100);
+            color: var(--emerald-700);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .hero h2 span {
+            color: var(--emerald-600);
+            display: block;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--emerald-600);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--emerald-700);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(5, 150, 105, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--emerald-600);
+            padding: 1rem 2rem;
+            border: 2px solid var(--emerald-600);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--emerald-50);
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: fadeInRight 1s ease;
+        }
+        
+        .card-decoration {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+            border-radius: 1.5rem;
+            transform: rotate(6deg);
+        }
+        
+        .hero-card {
+            position: relative;
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .card-icon {
+            width: 128px;
+            height: 128px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, var(--emerald-500), var(--teal-500));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            overflow: hidden;
+        }
+        
+        .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        
+        .stat-box {
+            background: var(--emerald-50);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        
+        .stat-box:nth-child(2) {
+            background: var(--teal-50);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--emerald-600);
+        }
+        
+        .stat-box:nth-child(2) .stat-number {
+            color: var(--teal-600);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1589457057814-d4ebaf6d578c?w=400') center/cover;
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+        
+        .features::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 250px;
+            height: 250px;
+            background: url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=400') center/cover;
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+        
+        /* About Us Section */
+        .about-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--emerald-50), white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600') center/cover;
+            opacity: 0.08;
+            border-radius: 50%;
+            filter: blur(3px);
+        }
+        
+        .about-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .about-text p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 1.5rem;
+        }
+        
+        .islamic-subjects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .subject-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--emerald-700);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .subject-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+        }
+        
+        .about-goal {
+            background: var(--emerald-100);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--emerald-600);
+            margin-top: 2rem;
+        }
+        
+        body[dir="rtl"] .about-goal {
+            border-left: none;
+            border-right: 4px solid var(--emerald-600);
+        }
+        
+        .about-goal p {
+            margin: 0;
+            font-size: 1.125rem;
+            color: var(--emerald-800);
+        }
+        
+        .about-features-list {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-features-list h3 {
+            font-size: 1.75rem;
+            color: var(--emerald-700);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-features-list ul {
+            list-style: none;
+        }
+        
+        .about-features-list li {
+            padding: 0.75rem 0;
+            font-size: 1.125rem;
+            color: var(--gray-700);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .about-features-list li i {
+            color: var(--emerald-600);
+            font-size: 1.25rem;
+        }
+        
+        .about-cta {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+            border-radius: 1rem;
+            text-align: center;
+        }
+        
+        .about-cta p {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Curriculum Section */
+        .curriculum-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .curriculum-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .curriculum-block {
+            background: linear-gradient(135deg, var(--emerald-50), var(--teal-50));
+            padding: 3rem;
+            border-radius: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .curriculum-block.additional {
+            background: linear-gradient(135deg, #fff7ed, var(--emerald-50));
+        }
+        
+        .curriculum-block h3 {
+            font-size: 2rem;
+            color: var(--emerald-700);
+            margin-bottom: 1.5rem;
+        }
+        
+        .curriculum-block p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 1.5rem;
+        }
+        
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .curriculum-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .curriculum-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.2);
+        }
+        
+        .curriculum-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .curriculum-item h4 {
+            font-size: 1.25rem;
+            color: var(--emerald-700);
+            margin-bottom: 0.75rem;
+        }
+        
+        .curriculum-item p {
+            font-size: 1rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+        
+        .curriculum-conclusion {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 2px solid var(--emerald-200);
+            font-weight: 600;
+            color: var(--emerald-800);
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--teal-50), white);
+        }
+        
+        .gallery-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            height: 300px;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-overlay h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-overlay p {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+        
+        /* Custom Package CTA */
+        .custom-package-cta {
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);
+        }
+        
+        .custom-package-content {
+            text-align: center;
+        }
+        
+        .custom-package-content h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .custom-package-content p {
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .custom-options {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .custom-option {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+        
+        .custom-option:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .custom-option i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .custom-option span {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .custom-package-btn {
+            display: inline-block;
+            background: white;
+            color: var(--emerald-600);
+            padding: 1rem 3rem;
+            border-radius: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .custom-package-btn:hover {
+            background: var(--emerald-50);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .title-underline {
+            width: 96px;
+            height: 4px;
+            background: var(--emerald-600);
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, var(--emerald-50), var(--teal-50));
+            padding: 2rem;
+            border-radius: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            transition: all 0.5s;
+            transform: scale(0);
+        }
+        
+        .feature-card:hover::before {
+            transform: scale(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            position: relative;
+            z-index: 1;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .feature-card:nth-child(2) .feature-icon {
+            animation-delay: 0.2s;
+        }
+        
+        .feature-card:nth-child(3) .feature-icon {
+            animation-delay: 0.4s;
+        }
+        
+        .feature-card:nth-child(4) .feature-icon {
+            animation-delay: 0.6s;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--gray-900);
+        }
+        
+        .feature-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
+        /* Programs Section */
+        .programs {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--emerald-50), var(--teal-50));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .programs::before {
+            content: '☪️';
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            font-size: 10rem;
+            opacity: 0.03;
+            transform: rotate(-15deg);
+        }
+        
+        .programs::after {
+            content: '🕌';
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            font-size: 8rem;
+            opacity: 0.03;
+        }
+        
+        .pricing-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--emerald-600), var(--teal-600));
+        }
+        
+        .pricing-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);
+            border: 2px solid var(--emerald-500);
+        }
+        
+        .pricing-card.featured::before {
+            height: 8px;
+        }
+        
+        .pricing-card.group-card {
+            background: linear-gradient(135deg, #fff7ed, white);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-size: 0.75rem;
+            box-shadow: 0 2px 10px rgba(251, 191, 36, 0.5);
+        }
+        
+        body[dir="rtl"] .popular-badge {
+            right: auto;
+            left: -35px;
+            transform: rotate(-45deg);
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--emerald-100);
+        }
+        
+        .pricing-header h3 {
+            font-size: 2.25rem;
+            color: var(--emerald-700);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .pricing-icon {
+            font-size: 3.5rem;
+            margin: 1rem 0;
+        }
+        
+        .pricing-list {
+            list-style: none;
+        }
+        
+        .pricing-list li {
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            background: var(--emerald-50);
+            border-radius: 0.75rem;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .pricing-list li:hover {
+            background: var(--emerald-100);
+            transform: translateX(-5px);
+        }
+        
+        body[dir="ltr"] .pricing-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .price-sessions {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--emerald-700);
+        }
+        
+        .price-note {
+            font-size: 1.25rem;
+            color: var(--emerald-600);
+            font-weight: 600;
+        }
+        
+        .programs-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .program-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .program-card h3 {
+            font-size: 1.75rem;
+            color: var(--emerald-700);
+            margin-bottom: 0.75rem;
+        }
+        
+        .program-card .description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+        
+        .program-features {
+            list-style: none;
+        }
+        
+        .program-features li {
+            padding: 0.5rem 0;
+            color: var(--gray-700);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .program-features li:before {
+            content: "✓";
+            color: var(--emerald-600);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 2rem;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--emerald-50) 0%, transparent 70%);
+            opacity: 0.5;
+        }
+        
+        .testimonials-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonials-images {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .testimonial-image-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
+            background: white;
+        }
+        
+        .testimonial-image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
+        }
+        
+        .testimonial-image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, var(--emerald-50), white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(5, 150, 105, 0.2);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--emerald-200);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        body[dir="rtl"] .testimonial-card::before {
+            left: auto;
+            right: 20px;
+        }
+        
+        .stars {
+            color: #fbbf24;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            color: var(--gray-700);
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--emerald-700);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--emerald-600), var(--teal-600));
+            color: white;
+        }
+        
+        .contact-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--gray-700);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--emerald-100);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--emerald-600);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-link.facebook:hover {
+            background: #1877F2;
+        }
+        
+        .social-link.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .social-link.tiktok:hover {
+            background: #000000;
+        }
+        
+        .social-link.youtube:hover {
+            background: #FF0000;
+        }
+        
+        .social-link.snapchat:hover {
+            background: #FFFC00;
+            color: #000;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-icon {
+                width: 100px;
+                height: 50px;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.125rem;
+            }
+            
+            .logo-text p {
+                font-size: 0.625rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            body[dir="rtl"] .whatsapp-float {
+                left: auto;
+                right: 20px;
+            }
+            
+            .social-links {
+                gap: 1rem;
+            }
+            
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            
+            .pricing-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            
+            .popular-badge {
+                font-size: 0.65rem;
+                padding: 0.4rem 2.5rem;
+            }
+            
+            .pricing-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .pricing-icon {
+                font-size: 2.5rem;
+            }
+            
+            .price-sessions {
+                font-size: 1.125rem;
+            }
+            
+            .price-note {
+                font-size: 1rem;
+            }
+            
+            .pricing-list li {
+                padding: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .islamic-subjects {
+                grid-template-columns: 1fr;
+            }
+            
+            .curriculum-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+            
+            .about-text p,
+            .curriculum-block p {
+                font-size: 1rem;
+            }
+            
+            .custom-package-cta {
+                padding: 2rem 1.5rem;
+            }
+            
+            .custom-package-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .custom-package-content p {
+                font-size: 1rem;
+            }
+            
+            .custom-options {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .custom-option {
+                padding: 0.75rem 1.5rem;
+            }
+            
+            .custom-option i {
+                font-size: 1.5rem;
+            }
+            
+            .custom-option span {
+                font-size: 1rem;
+            }
+            
+            .custom-package-btn {
+                font-size: 1rem;
+                padding: 0.875rem 2rem;
+            }
+            
+            .testimonials-images {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/201282269562" target="_blank" class="whatsapp-float" title="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="./لوجو.png" alt="أكاديمية آية">
+                </div>
+                <div class="logo-text">
+                    <h1 id="nav-title">أكاديمية آية</h1>
+                    <p id="nav-subtitle">لتحفيظ القرآن الكريم</p>
+                </div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" id="nav-home" style="font-size: 30px;">الرئيسية</a></li>
+                <li><a href="#about" id="nav-about" style="font-size: 30px;">عن الأكاديمية</a></li>
+                <li><a href="#programs" id="nav-programs" style="font-size: 30px;">البرامج</a></li>
+                <li><a href="#contact" id="nav-contact" style="font-size: 30px;">تواصل معنا</a></li>
+            </ul>
+            
+            <button class="lang-btn" onclick="toggleLanguage()">
+                <i class="fas fa-globe"></i>
+                <span id="lang-text">EN</span>
+            </button>
+            
+            <button class="mobile-menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="badge">
+                    ✨ <span id="hero-badge">أفضل أكاديمية لتحفيظ القرآن</span>
+                </div>
+                <h2>
+                    <span id="hero-title">أكاديمية آية</span>
+                    <span id="hero-subtitle-hero">لتحفيظ القرآن الكريم</span>
+                </h2>
+                <p id="hero-description">
+                    رحلتك لحفظ كتاب الله تبدأ هنا. نقدم برامج تحفيظ متميزة بإشراف نخبة من المعلمين المتخصصين
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" id="cta1">ابدأ رحلتك الآن</button>
+                    <button class="btn-secondary" id="cta2">تعرف على البرامج</button>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="card-decoration"></div>
+                <div class="hero-card">
+                    <div class="card-icon">
+                        <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=300&h=300&fit=crop" alt="القرآن الكريم">
+                    </div>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label" id="stat1">طالب</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label" id="stat2">معلم</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label" id="stat3">سنوات</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="features">
+        <div class="section-title">
+            <h2 id="features-title">لماذا أكاديمية آية؟</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3 id="feature1-title">منهج متكامل</h3>
+                <p id="feature1-desc">برامج تحفيظ مدروسة بعناية تناسب جميع الأعمار والمستويات</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 id="feature2-title">معلمون متخصصون</h3>
+                <p id="feature2-desc">نخبة من الحفاظ والمعلمين الحاصلين على إجازات في القراءات</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 id="feature3-title">مرونة في الأوقات</h3>
+                <p id="feature3-desc">جداول دراسية مرنة تناسب أوقاتك مع إمكانية التعلم عن بعد</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 id="feature4-title">شهادات معتمدة</h3>
+                <p id="feature4-desc">حصول على شهادات معتمدة عند إتمام كل مرحلة من مراحل الحفظ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="section-title">
+                <h2 id="about-section-title">🌸 من نحن</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="about-intro">
+                        أكاديمية آية لتحفيظ القرآن الكريم أونلاين - في أكاديميتنا، نجعل رحلة الطفل مع القرآن رحلة حبّ وفهم وتدبّر، لا مجرد حفظ كلمات. حلقتنا تجمع بين التحفيظ بالأحكام والتجويد والتفسير المبسّط لما يُؤخذ في الدرس، مع مراجعة دائمة للحفظ السابق لضمان ثبات الحفظ.
+                    </p>
+                    
+                    <p id="about-environment">
+                        نوفر بيئة تربوية آمنة بإشراف معلمين ومعلمات متخصصين، ونمنح وليّ الأمر حرية اختيار المواد الشرعية المرافقة مثل:
+                    </p>
+                    
+                    <div class="islamic-subjects">
+                        <div class="subject-item">📘 <span id="subject1">الحديث</span></div>
+                        <div class="subject-item">📗 <span id="subject2">الفقه</span></div>
+                        <div class="subject-item">📙 <span id="subject3">العقيدة</span></div>
+                        <div class="subject-item">📕 <span id="subject4">السيرة النبوية</span></div>
+                    </div>
+                    
+                    <div class="about-goal">
+                        <p id="about-goal-text">
+                            🎯 <strong>هدفنا:</strong> أن يخرج الطالب من كل حلقة وقد أتقن تلاوته، فهم معناه، وازداد حبًا لكتاب الله.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about-features-list">
+                    <h3 id="about-features-title">✨ مميزات الأكاديمية:</h3>
+                    <ul>
+                        <li id="about-feat1"><i class="fas fa-check-circle"></i> تعليم فردي أو جماعي أونلاين بجودة عالية</li>
+                        <li id="about-feat2"><i class="fas fa-check-circle"></i> متابعة وتقارير شهرية لتقدّم الطالب</li>
+                        <li id="about-feat3"><i class="fas fa-check-circle"></i> برامج تحفيزية وهدايا تشجيعية</li>
+                        <li id="about-feat4"><i class="fas fa-check-circle"></i> مرونة في المواعيد تناسب الأسرة</li>
+                    </ul>
+                    
+                    <div class="about-cta">
+                        <p id="about-cta-text">ابدئي رحلة طفلك مع القرآن اليوم... فكل آية تُحفظ هي خطوة نحو النور 🌿</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="curriculum-section">
+        <div class="curriculum-container">
+            <div class="section-title">
+                <h2 id="curriculum-title">🎓 مناهجنا التعليمية</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <!-- Islamic Studies Curriculum -->
+            <div class="curriculum-block">
+                <h3 id="islamic-curriculum-title">📖 مناهج العلوم الشرعية</h3>
+                <p id="islamic-curriculum-desc">
+                    تميزنا في أكاديمية آية أونلاين بأن لدينا مناهجنا الخاصة التي صُممت بعناية لتناسب كل عمر ومرحلة تعليمية. تنقسم المناهج إلى خمسة مستويات متدرجة، تبدأ من المستوى الأول حتى الخامس، وتشمل الأعمار من 3 سنوات وحتى 20 سنة، بما يضمن للطالب رحلة منظمة وواضحة في الحفظ والتجويد والفهم والتطبيق العملي للقرآن الكريم.
+                </p>
+                <p id="islamic-curriculum-goal">
+                    كل مستوى يهدف إلى ترسيخ مهارة محددة، ليصل الطالب في النهاية إلى إتقان التلاوة والحفظ والفهم الصحيح لكتاب الله، ضمن بيئة تربوية ممتعة ومحفّزة.
+                </p>
+            </div>
+            
+            <!-- Additional Curriculum -->
+            <div class="curriculum-block additional">
+                <h3 id="additional-curriculum-title">📚 مناهج إضافية متميزة</h3>
+                <p id="additional-curriculum-desc">
+                    نُقدّم مناهج شاملة تُراعي التدرج في الحفظ والفهم والتجويد، وتشمل:
+                </p>
+                
+                <div class="curriculum-grid">
+                    <div class="curriculum-item">
+                        <div class="curriculum-icon">📖</div>
+                        <h4 id="curr-item1">تحفيظ وتجويد وتفسير</h4>
+                        <p id="curr-item1-desc">مناهج مخصصة لكل مستوى</p>
+                    </div>
+                    
+                    <div class="curriculum-item">
+                        <div class="curriculum-icon">✍️</div>
+                        <h4 id="curr-item2">تأسيس اللغة العربية</h4>
+                        <p id="curr-item2-desc">من البداية بطريقة مبسطة وسلسة</p>
+                    </div>
+                    
+                    <div class="curriculum-item">
+                        <div class="curriculum-icon">🌟</div>
+                        <h4 id="curr-item3">نور البيان والقاعدة النورانية</h4>
+                        <p id="curr-item3-desc">لتعليم القراءة الصحيحة لكتاب الله</p>
+                    </div>
+                    
+                    <div class="curriculum-item">
+                        <div class="curriculum-icon">🔢</div>
+                        <h4 id="curr-item4">الرياضيات واللغة الإنجليزية</h4>
+                        <p id="curr-item4-desc">للأطفال بأساليب ممتعة وتفاعلية</p>
+                    </div>
+                </div>
+                
+                <p id="curriculum-conclusion" class="curriculum-conclusion">
+                    كل مستوى في مناهجنا يُبنى على ما قبله، ليصل الطالب بخطة متكاملة إلى إتقان القراءة، الحفظ، والفهم، مع بناء مهارات لغوية ومعرفية قوية تدعم رحلته التعليمية.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="section-title">
+                <h2 id="gallery-title">📸 معرض الصور</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./WhatsApp Image 2025-10-13 at 22.55.57.jpeg" alt="قراءة القرآن">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery1-title">تلاوة القرآن الكريم</h4>
+                        <p id="gallery1-desc">طلابنا يتلون كتاب الله بخشوع</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="./WhatsApp Image 2025-10-13 at 22.55.59.jpeg" alt="تعلم التجويد">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery2-title">تعلم التجويد</h4>
+                        <p id="gallery2-desc">إتقان أحكام التجويد بأفضل الطرق</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="./WhatsApp Image 2025-10-13 at 22.56.00.jpeg" alt="التعليم عن بعد">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery3-title">التعليم الإلكتروني</h4>
+                        <p id="gallery3-desc">حصص تفاعلية عبر الإنترنت</p>
+                    </div>
+                </div>
+                
+                <!-- <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop" alt="المسابقات">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery4-title">المسابقات والتكريم</h4>
+                        <p id="gallery4-desc">تحفيز الطلاب المتميزين</p>
+                    </div>
+                </div> -->
+                
+              
+                
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="section-title">
+            <h2 id="programs-title">باقتنا التعليمية</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <!-- Pricing Packages -->
+        <div class="pricing-container">
+            <!-- باقة 30 دقيقة فردي -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3 id="package1-title">باقة 30 دقيقة - فردي</h3>
+                    <div class="pricing-icon">⏱️</div>
+                </div>
+                <ul class="pricing-list">
+                    <li>
+                        <span class="price-sessions" id="package1-option1">4 حصص شهرياً</span>
+                        <span class="price-note" id="package1-note1">30 ريال | 250 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package1-option2">8 حصص شهرياً</span>
+                        <span class="price-note" id="package1-note2">50 ريال | 450 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package1-option3">12 حصة شهرياً</span>
+                        <span class="price-note" id="package1-note3">60 ريال | 650 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package1-option4">16 حصة شهرياً</span>
+                        <span class="price-note" id="package1-note4">75 ريال | 750 جنيه</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- باقة 40 دقيقة فردي -->
+            <div class="pricing-card featured">
+                <div class="popular-badge" id="popular-badge">الأكثر طلباً</div>
+                <div class="pricing-header">
+                    <h3 id="package2-title">باقة 40 دقيقة - فردي</h3>
+                    <div class="pricing-icon">⏰</div>
+                </div>
+                <ul class="pricing-list">
+                    <li>
+                        <span class="price-sessions" id="package2-option1">4 حصص شهرياً</span>
+                        <span class="price-note" id="package2-note1">40 ريال | 350 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package2-option2">8 حصص شهرياً</span>
+                        <span class="price-note" id="package2-note2">55 ريال | 550 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package2-option3">12 حصة شهرياً</span>
+                        <span class="price-note" id="package2-note3">70 ريال | 800 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package2-option4">16 حصة شهرياً</span>
+                        <span class="price-note" id="package2-note4">85 ريال | 900 جنيه</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- باقة 60 دقيقة فردي -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3 id="package3-title">باقة 60 دقيقة - فردي</h3>
+                    <div class="pricing-icon">🕐</div>
+                </div>
+                <ul class="pricing-list">
+                    <li>
+                        <span class="price-sessions" id="package3-option1">4 حصص شهرياً</span>
+                        <span class="price-note" id="package3-note1">60 ريال | 450 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package3-option2">8 حصص شهرياً</span>
+                        <span class="price-note" id="package3-note2">75 ريال | 800 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package3-option3">12 حصة شهرياً</span>
+                        <span class="price-note" id="package3-note3">100 ريال | 1000 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package3-option4">16 حصة شهرياً</span>
+                        <span class="price-note" id="package3-note4">130 ريال | 1200 جنيه</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- حلقات جماعية -->
+            <div class="pricing-card group-card">
+                <div class="pricing-header">
+                    <h3 id="package4-title">حلقات جماعية</h3>
+                    <div class="pricing-icon">👥</div>
+                </div>
+                <ul class="pricing-list">
+                    <li>
+                        <span class="price-sessions" id="package4-option1">4 حلقات شهرياً</span>
+                        <span class="price-note" id="package4-note1">15 ريال | 150 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package4-option2">8 حلقات شهرياً</span>
+                        <span class="price-note" id="package4-note2">20 ريال | 250 جنيه</span>
+                    </li>
+                    <li>
+                        <span class="price-sessions" id="package4-option3">12 حلقة شهرياً</span>
+                        <span class="price-note" id="package4-note3">30 ريال | 350 جنيه</span>
+                    </li>
+                </ul>
+                <p style="font-size: 1rem; color: var(--emerald-600); margin-top: 1rem; font-weight: 600; text-align: center;" id="group-note">
+                    * مع وجود حصة تجريبية مجاناً
+                </p>
+            </div>
+        </div>
+
+        <!-- Custom Package CTA -->
+        <div class="custom-package-cta">
+            <div class="custom-package-content">
+                <h3 id="custom-package-title">💬 أو تواصل معنا لاختيار باقتك على حسب احتياجك</h3>
+                <p id="custom-package-intro">نُتيح لكل طالب أو ولي أمر اختيار الباقة المناسبة من حيث:</p>
+                <div class="custom-options">
+                    <div class="custom-option">
+                        <i class="fas fa-calendar-check"></i>
+                        <span id="custom-option1">عدد الحصص الشهرية</span>
+                    </div>
+                    <div class="custom-option">
+                        <i class="fas fa-clock"></i>
+                        <span id="custom-option2">مدة كل حصة</span>
+                    </div>
+                </div>
+                <a href="#contact" class="custom-package-btn" id="custom-package-btn">تواصل معنا الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2 id="testimonials-title">آراء أولياء الأمور</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="testimonials-images">
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.13 (1).jpeg" alt="رأي ولي أمر 1">
+            </div>
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.13.jpeg" alt="رأي ولي أمر 2">
+            </div>
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.14 (1).jpeg" alt="رأي ولي أمر 3">
+            </div>
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.14 (2).jpeg" alt="رأي ولي أمر 4">
+            </div>
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.14 (4).jpeg" alt="رأي ولي أمر 5">
+            </div>
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.14 (3).jpeg" alt="رأي ولي أمر 6">
+            </div>
+
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.14.jpeg" alt="رأي ولي أمر 6">
+            </div>
+
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.15 (1).jpeg" alt="رأي ولي أمر 6">
+            </div>
+
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.15 (2).jpeg" alt="رأي ولي أمر 6">
+            </div>
+
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.15 (3).jpeg" alt="رأي ولي أمر 6">
+            </div>
+
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.15.jpeg" alt="رأي ولي أمر 6">
+            </div>
+
+
+            <div class="testimonial-image-card">
+                <img src="./WhatsApp Image 2025-10-13 at 22.38.16.jpeg" alt="رأي ولي أمر 6">
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 id="contact-title">تواصل معنا</h2>
+                <p id="contact-subtitle">نحن هنا للإجابة على استفساراتك</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p>+201282269562</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p>ayaacademey@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p id="contact-address">القاهرة، مصر</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name" id="form-name-label">الاسم</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" id="form-email-label">البريد الإلكتروني</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" id="form-phone-label">رقم الهاتف</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" id="form-message-label">رسالتك</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%;" id="form-submit">إرسال</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-tagline">نحو جيل قرآني متميز</p>
+        
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/aya.academy1.quran?mibextid=ZbWKwL" target="_blank" class="social-link facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/aya_acadmy_for_quran?igsh=YzljYTk1ODg3Zg==" target="_blank" class="social-link instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@aya_academy_quran?lang=ar" target="_blank" class="social-link tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@ayaacademyforlearningquran" target="_blank" class="social-link youtube" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.snapchat.com/web" target="_blank" class="social-link snapchat" title="Snapchat">
+                <i class="fab fa-snapchat-ghost"></i>
+            </a>
+        </div>
+        
+        <p id="footer-rights">© 2024 أكاديمية آية. جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Language toggle with localStorage
+        let currentLang = localStorage.getItem('language') || 'ar';
+        
+        const translations = {
+            ar: {
+                'nav-title': 'أكاديمية آية',
+                'nav-subtitle': 'لتحفيظ القرآن الكريم',
+                'nav-home': 'الرئيسية',
+                'nav-about': 'عن الأكاديمية',
+                'nav-programs': 'البرامج',
+                'nav-contact': 'تواصل معنا',
+                'lang-text': 'EN',
+                'hero-badge': 'أفضل أكاديمية لتحفيظ القرآن',
+                'hero-title': 'أكاديمية آية',
+                'hero-subtitle-hero': 'لتحفيظ القرآن الكريم',
+                'hero-description': 'رحلتك لحفظ كتاب الله تبدأ هنا. نقدم برامج تحفيظ متميزة بإشراف نخبة من المعلمين المتخصصين',
+                'cta1': 'ابدأ رحلتك الآن',
+                'cta2': 'تعرف على البرامج',
+                'stat1': 'طالب',
+                'stat2': 'معلم',
+                'stat3': 'سنوات',
+                'features-title': 'لماذا أكاديمية آية؟',
+                'feature1-title': 'منهج متكامل',
+                'feature1-desc': 'برامج تحفيظ مدروسة بعناية تناسب جميع الأعمار والمستويات',
+                'feature2-title': 'معلمون متخصصون',
+                'feature2-desc': 'نخبة من الحفاظ والمعلمين الحاصلين على إجازات في القراءات',
+                'feature3-title': 'مرونة في الأوقات',
+                'feature3-desc': 'جداول دراسية مرنة تناسب أوقاتك مع إمكانية التعلم عن بعد',
+                'feature4-title': 'شهادات معتمدة',
+                'feature4-desc': 'حصول على شهادات معتمدة عند إتمام كل مرحلة من مراحل الحفظ',
+                'about-section-title': '🌸 من نحن 🌸',
+                'about-intro': 'أكاديمية آية لتحفيظ القرآن الكريم أونلاين - في أكاديميتنا، نجعل رحلة الطفل مع القرآن رحلة حبّ وفهم وتدبّر، لا مجرد حفظ كلمات. حلقتنا تجمع بين التحفيظ بالأحكام والتجويد والتفسير المبسّط لما يُؤخذ في الدرس، مع مراجعة دائمة للحفظ السابق لضمان ثبات الحفظ.',
+                'about-environment': 'نوفر بيئة تربوية آمنة بإشراف معلمين ومعلمات متخصصين، ونمنح وليّ الأمر حرية اختيار المواد الشرعية المرافقة مثل:',
+                'subject1': 'الحديث',
+                'subject2': 'الفقه',
+                'subject3': 'العقيدة',
+                'subject4': 'السيرة النبوية',
+                'about-goal-text': '🎯 هدفنا: أن يخرج الطالب من كل حلقة وقد أتقن تلاوته، فهم معناه، وازداد حبًا لكتاب الله.',
+                'about-features-title': '✨ مميزات الأكاديمية:',
+                'about-feat1': 'تعليم فردي أو جماعي أونلاين بجودة عالية',
+                'about-feat2': 'متابعة وتقارير شهرية لتقدّم الطالب',
+                'about-feat3': 'برامج تحفيزية وهدايا تشجيعية',
+                'about-feat4': 'مرونة في المواعيد تناسب الأسرة',
+                'about-cta-text': 'ابدئي رحلة طفلك مع القرآن اليوم... فكل آية تُحفظ هي خطوة نحو النور 🌿',
+                'curriculum-title': '🎓 مناهجنا التعليمية',
+                'islamic-curriculum-title': '📖 مناهج العلوم الشرعية',
+                'islamic-curriculum-desc': 'تميزنا في أكاديمية آية أونلاين بأن لدينا مناهجنا الخاصة التي صُممت بعناية لتناسب كل عمر ومرحلة تعليمية. تنقسم المناهج إلى خمسة مستويات متدرجة، تبدأ من المستوى الأول حتى الخامس، وتشمل الأعمار من 3 سنوات وحتى 20 سنة، بما يضمن للطالب رحلة منظمة وواضحة في الحفظ والتجويد والفهم والتطبيق العملي للقرآن الكريم.',
+                'islamic-curriculum-goal': 'كل مستوى يهدف إلى ترسيخ مهارة محددة، ليصل الطالب في النهاية إلى إتقان التلاوة والحفظ والفهم الصحيح لكتاب الله، ضمن بيئة تربوية ممتعة ومحفّزة.',
+                'additional-curriculum-title': '📚 مناهج إضافية متميزة',
+                'additional-curriculum-desc': 'نُقدّم مناهج شاملة تُراعي التدرج في الحفظ والفهم والتجويد، وتشمل:',
+                'curr-item1': 'تحفيظ وتجويد وتفسير',
+                'curr-item1-desc': 'مناهج مخصصة لكل مستوى',
+                'curr-item2': 'تأسيس اللغة العربية',
+                'curr-item2-desc': 'من البداية بطريقة مبسطة وسلسة',
+                'curr-item3': 'نور البيان والقاعدة النورانية',
+                'curr-item3-desc': 'لتعليم القراءة الصحيحة لكتاب الله',
+                'curr-item4': 'الرياضيات واللغة الإنجليزية',
+                'curr-item4-desc': 'للأطفال بأساليب ممتعة وتفاعلية',
+                'curriculum-conclusion': 'كل مستوى في مناهجنا يُبنى على ما قبله، ليصل الطالب بخطة متكاملة إلى إتقان القراءة، الحفظ، والفهم، مع بناء مهارات لغوية ومعرفية قوية تدعم رحلته التعليمية.',
+                'gallery-title': '📸 معرض الصور',
+                'gallery1-title': 'تلاوة القرآن الكريم',
+                'gallery1-desc': 'طلابنا يتلون كتاب الله بخشوع',
+                'gallery2-title': 'تعلم التجويد',
+                'gallery2-desc': 'إتقان أحكام التجويد بأفضل الطرق',
+                'gallery3-title': 'التعليم الإلكتروني',
+                'gallery3-desc': 'حصص تفاعلية عبر الإنترنت',
+                'gallery4-title': 'المسابقات والتكريم',
+                'gallery4-desc': 'تحفيز الطلاب المتميزين',
+                'gallery5-title': 'معلمون متخصصون',
+                'gallery5-desc': 'نخبة من الحفاظ المتميزين',
+                'gallery6-title': 'الحلقات الجماعية',
+                'gallery6-desc': 'بيئة تعليمية محفزة ومشجعة',
+                'custom-package-title': '💬 أو تواصل معنا لاختيار باقتك على حسب احتياجك',
+                'custom-package-intro': 'نُتيح لكل طالب أو ولي أمر اختيار الباقة المناسبة من حيث:',
+                'custom-option1': 'عدد الحصص الشهرية',
+                'custom-option2': 'مدة كل حصة',
+                'custom-package-btn': 'تواصل معنا الآن',
+                'programs-title': 'باقتنا التعليمية',
+                'package1-title': 'باقة 30 دقيقة - فردي',
+                'package1-option1': '4 حصص شهرياً',
+                'package1-note1': '30 ريال | 250 جنيه',
+                'package1-option2': '8 حصص شهرياً',
+                'package1-note2': '50 ريال | 450 جنيه',
+                'package1-option3': '12 حصة شهرياً',
+                'package1-note3': '60 ريال | 650 جنيه',
+                'package1-option4': '16 حصة شهرياً',
+                'package1-note4': '75 ريال | 750 جنيه',
+                'package2-title': 'باقة 40 دقيقة - فردي',
+                'popular-badge': 'الأكثر طلباً',
+                'package2-option1': '4 حصص شهرياً',
+                'package2-note1': '40 ريال | 350 جنيه',
+                'package2-option2': '8 حصص شهرياً',
+                'package2-note2': '55 ريال | 550 جنيه',
+                'package2-option3': '12 حصة شهرياً',
+                'package2-note3': '70 ريال | 800 جنيه',
+                'package2-option4': '16 حصة شهرياً',
+                'package2-note4': '85 ريال | 900 جنيه',
+                'package3-title': 'باقة 60 دقيقة - فردي',
+                'package3-option1': '4 حصص شهرياً',
+                'package3-note1': '60 ريال | 450 جنيه',
+                'package3-option2': '8 حصص شهرياً',
+                'package3-note2': '75 ريال | 800 جنيه',
+                'package3-option3': '12 حصة شهرياً',
+                'package3-note3': '100 ريال | 1000 جنيه',
+                'package3-option4': '16 حصة شهرياً',
+                'package3-note4': '130 ريال | 1200 جنيه',
+                'package4-title': 'حلقات جماعية',
+                'package4-option1': '4 حلقات شهرياً',
+                'package4-note1': '15 ريال | 150 جنيه',
+                'package4-option2': '8 حلقات شهرياً',
+                'package4-note2': '20 ريال | 250 جنيه',
+                'package4-option3': '12 حلقة شهرياً',
+                'package4-note3': '30 ريال | 350 جنيه',
+                'group-note': '* مع وجود حصة تجريبية مجاناً',
+                'testimonials-title': 'آراء أولياء الأمور',
+                'testimonial1-text': 'أكاديمية آية غيرت حياة ابني، أصبح يحب حفظ القرآن ويتشوق لحلقات التحفيظ',
+                'testimonial1-name': 'أم محمد',
+                'testimonial2-text': 'منهج رائع ومعلمون متميزون، حفظت 10 أجزاء في سنة واحدة والحمد لله',
+                'testimonial2-name': 'أحمد سعيد',
+                'testimonial3-text': 'المرونة في الأوقات والتعلم عن بعد جعلني أحقق حلمي بحفظ القرآن',
+                'testimonial3-name': 'فاطمة علي',
+                'contact-title': 'تواصل معنا',
+                'contact-subtitle': 'نحن هنا للإجابة على استفساراتك',
+                'contact-address': 'القاهرة، مصر',
+                'form-name-label': 'الاسم',
+                'form-email-label': 'البريد الإلكتروني',
+                'form-phone-label': 'رقم الهاتف',
+                'form-message-label': 'رسالتك',
+                'form-submit': 'إرسال',
+                'footer-tagline': 'نحو جيل قرآني متميز',
+                'footer-rights': '© 2024 أكاديمية آية. جميع الحقوق محفوظة'
+            },
+            en: {
+                'nav-title': 'Aya Academy',
+                'nav-subtitle': 'Quran Memorization',
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-programs': 'Programs',
+                'nav-contact': 'Contact',
+                'lang-text': 'عربي',
+                'hero-badge': 'Best Quran Academy',
+                'hero-title': 'Aya Academy',
+                'hero-subtitle-hero': 'Quran Memorization',
+                'hero-description': 'Your journey to memorize the Holy Quran starts here. We offer distinguished memorization programs supervised by specialized teachers',
+                'cta1': 'Start Your Journey',
+                'cta2': 'Explore Programs',
+                'stat1': 'Students',
+                'stat2': 'Teachers',
+                'stat3': 'Years',
+                'features-title': 'Why Aya Academy?',
+                'feature1-title': 'Comprehensive Curriculum',
+                'feature1-desc': 'Carefully designed memorization programs suitable for all ages and levels',
+                'feature2-title': 'Specialized Teachers',
+                'feature2-desc': 'Elite memorizers and teachers with Ijazah in Quranic recitations',
+                'feature3-title': 'Flexible Schedule',
+                'feature3-desc': 'Flexible study schedules that suit your time with remote learning options',
+                'feature4-title': 'Certified Programs',
+                'feature4-desc': 'Receive accredited certificates upon completing each memorization stage',
+                'about-section-title': '🌸 About Us',
+                'about-intro': 'Aya Academy for Online Quran Memorization - In our academy, we make the child\'s journey with the Quran a journey of love, understanding, and contemplation, not just memorizing words. Our sessions combine memorization with Tajweed rules and simplified interpretation of the lessons, with continuous review of previous memorization to ensure retention.',
+                'about-environment': 'We provide a safe educational environment supervised by specialized male and female teachers, and we give parents the freedom to choose accompanying Islamic subjects such as:',
+                'subject1': 'Hadith',
+                'subject2': 'Fiqh',
+                'subject3': 'Aqeedah',
+                'subject4': 'Prophet\'s Biography',
+                'about-goal-text': '🎯 Our Goal: For the student to leave each session having perfected their recitation, understood its meaning, and increased their love for the Book of Allah.',
+                'about-features-title': '✨ Academy Features:',
+                'about-feat1': 'Individual or group online education with high quality',
+                'about-feat2': 'Monthly follow-up and progress reports',
+                'about-feat3': 'Motivational programs and encouraging gifts',
+                'about-feat4': 'Flexible schedules that suit the family',
+                'about-cta-text': 'Start your child\'s journey with the Quran today... Every verse memorized is a step towards the light 🌿',
+                'curriculum-title': '🎓 Our Educational Curricula',
+                'islamic-curriculum-title': '📖 Islamic Studies Curricula',
+                'islamic-curriculum-desc': 'We distinguish ourselves at Aya Academy Online by having our own curricula carefully designed to suit every age and educational stage. The curricula are divided into five progressive levels, starting from level one to five, covering ages from 3 to 20 years, ensuring the student has an organized and clear journey in memorization, Tajweed, understanding, and practical application of the Holy Quran.',
+                'islamic-curriculum-goal': 'Each level aims to establish a specific skill, so that the student ultimately achieves mastery of recitation, memorization, and proper understanding of the Book of Allah, within a fun and motivating educational environment.',
+                'additional-curriculum-title': '📚 Distinguished Additional Curricula',
+                'additional-curriculum-desc': 'We offer comprehensive curricula that consider progression in memorization, understanding, and Tajweed, including:',
+                'curr-item1': 'Memorization, Tajweed, and Interpretation',
+                'curr-item1-desc': 'Specialized curricula for each level',
+                'curr-item2': 'Arabic Language Foundation',
+                'curr-item2-desc': 'From the beginning in a simplified and smooth way',
+                'curr-item3': 'Noor Al-Bayan and Noorani Qaida',
+                'curr-item3-desc': 'To teach proper reading of the Book of Allah',
+                'curr-item4': 'Mathematics and English Language',
+                'curr-item4-desc': 'For children with fun and interactive methods',
+                'curriculum-conclusion': 'Each level in our curricula builds on the previous one, so the student reaches a complete plan to master reading, memorization, and understanding, while building strong linguistic and cognitive skills that support their educational journey.',
+                'gallery-title': '📸 Photo Gallery',
+                'gallery1-title': 'Quran Recitation',
+                'gallery1-desc': 'Our students recite the Book of Allah with devotion',
+                'gallery2-title': 'Learning Tajweed',
+                'gallery2-desc': 'Mastering Tajweed rules in the best ways',
+                'gallery3-title': 'Online Learning',
+                'gallery3-desc': 'Interactive online sessions',
+                'gallery4-title': 'Competitions & Awards',
+                'gallery4-desc': 'Motivating distinguished students',
+                'gallery5-title': 'Specialized Teachers',
+                'gallery5-desc': 'Elite distinguished Quran memorizers',
+                'gallery6-title': 'Group Sessions',
+                'gallery6-desc': 'Motivating and encouraging learning environment',
+                'programs-title': 'Our Programs',
+                'package1-title': '30 Minutes - Individual',
+                'package1-option1': '4 Sessions Monthly',
+                'package1-note1': '30 SAR | 250 EGP',
+                'package1-option2': '8 Sessions Monthly',
+                'package1-note2': '50 SAR | 450 EGP',
+                'package1-option3': '12 Sessions Monthly',
+                'package1-note3': '60 SAR | 650 EGP',
+                'package1-option4': '16 Sessions Monthly',
+                'package1-note4': '75 SAR | 750 EGP',
+                'package2-title': '40 Minutes - Individual',
+                'popular-badge': 'Most Popular',
+                'package2-option1': '4 Sessions Monthly',
+                'package2-note1': '40 SAR | 350 EGP',
+                'package2-option2': '8 Sessions Monthly',
+                'package2-note2': '55 SAR | 550 EGP',
+                'package2-option3': '12 Sessions Monthly',
+                'package2-note3': '70 SAR | 800 EGP',
+                'package2-option4': '16 Sessions Monthly',
+                'package2-note4': '85 SAR | 900 EGP',
+                'package3-title': '60 Minutes - Individual',
+                'package3-option1': '4 Sessions Monthly',
+                'package3-note1': '60 SAR | 450 EGP',
+                'package3-option2': '8 Sessions Monthly',
+                'package3-note2': '75 SAR | 800 EGP',
+                'package3-option3': '12 Sessions Monthly',
+                'package3-note3': '100 SAR | 1000 EGP',
+                'package3-option4': '16 Sessions Monthly',
+                'package3-note4': '130 SAR | 1200 EGP',
+                'package4-title': 'Group Sessions',
+                'package4-option1': '4 Sessions Monthly',
+                'package4-note1': '15 SAR | 150 EGP',
+                'package4-option2': '8 Sessions Monthly',
+                'package4-note2': '20 SAR | 250 EGP',
+                'package4-option3': '12 Sessions Monthly',
+                'package4-note3': '30 SAR | 350 EGP',
+                'group-note': '* Free trial session included',
+                'testimonials-title': 'Parents Reviews',
+                'testimonial1-text': "Aya Academy changed my son's life, he now loves memorizing Quran and looks forward to classes",
+                'testimonial1-name': 'Um Mohammed',
+                'testimonial2-text': 'Wonderful curriculum and distinguished teachers, I memorized 10 Juz in one year Alhamdulillah',
+                'testimonial2-name': 'Ahmed Said',
+                'testimonial3-text': 'Flexibility in timing and remote learning helped me achieve my dream of memorizing Quran',
+                'testimonial3-name': 'Fatima Ali',
+                'contact-title': 'Contact Us',
+                'contact-subtitle': 'We are here to answer your questions',
+                'contact-address': 'Cairo, Egypt',
+                'form-name-label': 'Name',
+                'form-email-label': 'Email',
+                'form-phone-label': 'Phone',
+                'form-message-label': 'Message',
+                'form-submit': 'Send',
+                'footer-tagline': 'Towards a Distinguished Quranic Generation',
+                'footer-rights': '© 2024 Aya Academy. All Rights Reserved',
+                'custom-package-title': '💬 Or contact us to choose your package according to your needs',
+                'custom-package-intro': 'We allow each student or parent to choose the appropriate package in terms of:',
+                'custom-option1': 'Number of monthly sessions',
+                'custom-option2': 'Duration of each session',
+                'custom-package-btn': 'Contact Us Now'
+            }
+        };
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('language', currentLang);
+            const body = document.body;
+            const html = document.documentElement;
+            
+            if (currentLang === 'ar') {
+                body.setAttribute('dir', 'rtl');
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+            } else {
+                body.setAttribute('dir', 'ltr');
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+            }
+            
+            updateContent();
+        }
+        
+        // Initialize language on page load
+        function initLanguage() {
+            const body = document.body;
+            const html = document.documentElement;
+            
+            if (currentLang === 'ar') {
+                body.setAttribute('dir', 'rtl');
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+            } else {
+                body.setAttribute('dir', 'ltr');
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+            }
+            
+            updateContent();
+        }
+        
+        // Load saved language on page load
+        window.addEventListener('DOMContentLoaded', initLanguage);
+        
+        function updateContent() {
+            const t = translations[currentLang];
+            
+            // Update all elements by ID
+            for (let key in t) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = t[key];
+                }
+            }
+        }
+        
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert(currentLang === 'ar' ? 'شكراً لتواصلك معنا! سنرد عليك قريباً' : 'Thank you for contacting us! We will respond soon');
+        });
+    </script>
+</body>
+</html>
