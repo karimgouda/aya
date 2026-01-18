@@ -323,7 +323,7 @@
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
 
-                const response = await fetch('http://localhost:3000/save_data', {
+                const response = await fetch('/save_data', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
