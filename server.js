@@ -14,10 +14,10 @@ app.use(express.static(path.join(__dirname))); // Serve static files from curren
 
 // Database Connection
 const db = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password: '',
-    database: 'aya_academy'
+    host: 'localhost',
+    user: 'aya_user',
+    password: 'StrongPassword123!',
+    database: 'aya'
 });
 
 db.connect((err) => {
