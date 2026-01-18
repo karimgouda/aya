@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'register.html'));
 });
 
-app.post('/submit', (req, res) => {
+app.post('/api/register', (req, res) => {
     const { children_count, stage, subjects, whatsapp } = req.body;
 
     // Convert subjects array to string
