@@ -14,10 +14,10 @@ app.use(express.static(path.join(__dirname))); // Serve static files from curren
 
 // Database Connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'aya_user',
-    password: 'StrongPassword123!',
-    database: 'aya'
+    host: '127.0.0.1',
+    user: 'root',
+    password: '',
+    database: 'aya_academy'
 });
 
 db.connect((err) => {
@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'register.html'));
 });
 
-app.post('/api/register', (req, res) => {
+app.post('/save_data', (req, res) => {
     const { children_count, stage, subjects, whatsapp } = req.body;
 
     // Convert subjects array to string
