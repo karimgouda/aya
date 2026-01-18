@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل طالب جديد | أكاديمية آية</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --emerald-50: #ecfdf5;
+            --emerald-100: #d1fae5;
+            --emerald-500: #10b981;
+            --emerald-600: #059669;
+            --emerald-700: #047857;
+            --emerald-800: #065f46;
+            --teal-50: #f0fdfa;
+            --teal-500: #14b8a6;
+            --teal-600: #0d9488;
+            --gray-50: #f9fafb;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: linear-gradient(135deg, var(--emerald-50) 0%, #ffffff 50%, var(--teal-50) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body[dir="rtl"] {
+            direction: rtl;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation (Simplified) */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--emerald-800);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem;
+        }
+
+        .form-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            border-top: 5px solid var(--emerald-600);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h2 {
+            color: var(--emerald-800);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: var(--gray-600);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--gray-700);
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--emerald-100);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--emerald-500);
+            box-shadow: 0 0 0 3px var(--emerald-100);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border: 1px solid var(--emerald-100);
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .checkbox-item:hover {
+            background: var(--emerald-50);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 1.2rem;
+            height: 1.2rem;
+            accent-color: var(--emerald-600);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--emerald-600);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            background: var(--emerald-700);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: var(--emerald-600);
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        .alert-success {
+            background-color: var(--emerald-100);
+            color: var(--emerald-800);
+            border: 1px solid var(--emerald-500);
+        }
+
+        .alert-error {
+            background-color: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #f87171;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo-text">
+                <h1>أكاديمية آية</h1>
+            </div>
+            <a href="index.html" style="text-decoration: none; color: var(--emerald-600); font-weight: bold;">
+                <i class="fas fa-home"></i> الرئيسية
+            </a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>تسجيل بيانات الطالب</h2>
+                <p>يرجى ملء النموذج التالي بدقة</p>
+            </div>
+
+            <div id="alertMessage" class="alert"></div>
+
+            <form id="registrationForm">
+                <!-- Number of Children -->
+                <div class="form-group">
+                    <label for="children_count" class="form-label">
+                        <i class="fas fa-users"></i> عدد الأولاد
+                    </label>
+                    <input type="number" id="children_count" name="children_count" class="form-control" min="1" required placeholder="أدخل عدد الأولاد">
+                </div>
+
+                <!-- Educational Stage -->
+                <div class="form-group">
+                    <label for="stage" class="form-label">
+                        <i class="fas fa-graduation-cap"></i> المرحلة الدراسية
+                    </label>
+                    <select id="stage" name="stage" class="form-control" required>
+                        <option value="" disabled selected>اختر المرحلة الدراسية</option>
+                        <option value="kindergarten">رياض أطفال</option>
+                        <option value="primary">المرحلة الابتدائية</option>
+                        <option value="preparatory">المرحلة الإعدادية</option>
+                        <option value="secondary">المرحلة الثانوية</option>
+                        <option value="university">المرحلة الجامعية</option>
+                        <option value="adults">كبار</option>
+                    </select>
+                </div>
+
+                <!-- Subjects -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-book-open"></i> المادة الدراسية
+                    </label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="quran">
+                            <span>قرآن كريم</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="science">
+                            <span>علوم</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="math">
+                            <span>رياضيات</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="english">
+                            <span>إنجليزي</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="subjects" value="arabic">
+                            <span>لغة عربية</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Number -->
+                <div class="form-group">
+                    <label for="whatsapp" class="form-label">
+                        <i class="fab fa-whatsapp"></i> رقم الواتس آب
+                    </label>
+                    <input type="tel" id="whatsapp" name="whatsapp" class="form-control" required placeholder="مثال: 01xxxxxxxxx" pattern="[0-9]{10,15}">
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> إرسال البيانات
+                </button>
+            </form>
+
+            <a href="index.html" class="back-link">العودة للصفحة الرئيسية</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                children_count: formData.get('children_count'),
+                stage: formData.get('stage'),
+                subjects: formData.getAll('subjects'),
+                whatsapp: formData.get('whatsapp')
+            };
+
+            const alertBox = document.getElementById('alertMessage');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            try {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+
+                const response = await fetch('http://localhost:3000/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alertBox.className = 'alert alert-success';
+                    alertBox.textContent = 'تم تسجيل البيانات بنجاح!';
+                    alertBox.style.display = 'block';
+                    this.reset();
+                } else {
+                    throw new Error(result.message || 'حدث خطأ أثناء التسجيل');
+                }
+            } catch (error) {
+                alertBox.className = 'alert alert-error';
+                alertBox.textContent = error.message;
+                alertBox.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال البيانات';
+            }
+        });
+    </script>
+
+</body>
+</html>
